@@ -1,0 +1,14 @@
+.todo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1.8rem;
+}
+
+.completed{
+    text-decoration: line-through;
+    color: var(--main-gray);
+    opacity: .5;
+}
