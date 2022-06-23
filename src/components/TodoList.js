@@ -1,9 +1,17 @@
+import { useState } from "react";
 import Todo from "./Todo";
+import TodoForm from "./TodoForm";
+import styles from "./todoList.module.css"
 
-const TodoList = ({ todos, onComplete, onEdit, onRemove }) => {
+const TodoList = ({ todos, onComplete, onRemove, onUpdatedHandler }) => {
+  const [edit, setEdit] = useState({ id: null, text: "", isCompleted: false });
+  const editTodo = (newValue) => {
+    onUpdatedHandler(edit.id, newValue);
+    setEdit({ id: null, text: "" });
+  };
   const renderTodos = () => {
     if (todos.length === 0) {
-      return <p>ایده تو بنویس</p>;
+      return <p className={styles.nothingInTodos}>ایده تو بنویس</p>;
     }
     return todos.map((todo) => {
       return (
@@ -11,13 +19,21 @@ const TodoList = ({ todos, onComplete, onEdit, onRemove }) => {
           key={todo.id}
           todo={todo}
           onComplete={() => onComplete(todo.id)}
-          onEdit={() => onEdit(todo.id)}
+          onEdit={() => setEdit(todo)}
           onRemove={() => onRemove(todo.id)}
         />
       );
     });
   };
-  return <section>{renderTodos()}</section>;
+  return (
+    <section className={styles.sectionTodo}>
+      {edit.id ? (
+        <TodoForm addTodoHandler={editTodo} edit={edit} />
+      ) : (
+        renderTodos()
+      )}
+    </section>
+  );
 };
 
 export default TodoList;

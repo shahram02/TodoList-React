@@ -5,10 +5,61 @@
     width: 100%;
     margin: 10px 0;
     font-size: 1.8rem;
+    background-color: var(--secondary-purple);
+    padding: .5rem 1rem;
+    border-radius: 10px;
+}
+
+.title-todo{
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: var(--dark-primary);
 }
 
 .completed{
     text-decoration: line-through;
     color: var(--main-gray);
-    opacity: .5;
 }
+
+.btnContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+.btn{
+    padding: .8rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.edit{
+    background-color: var(--white-primary);
+    border: solid 1px var(--main-purple);
+    color: var(--main-purple);
+}
+.remove{
+    color: var(--main-red);
+    border: solid 1px var(--main-red);
+    background-color: var(--white-primary);
+}
+
+.edit:hover{
+    background-color: var(--main-purple);
+    color: var(--white-primary);
+}
+
+.remove:hover{
+    color: var(--white-primary);
+    background-color: var(--main-red);
+}
+

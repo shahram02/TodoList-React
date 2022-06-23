@@ -1,0 +1,73 @@
+
+form {
+    display: flex;
+    gap: .4rem;
+    padding: 1rem 0;
+}
+.containerInput{
+    position: relative;
+}
+.input{
+    background-color: var(--main-white);
+    border: solid 1px var(--main-gray);
+    border-radius: 10px;
+    padding: 5px 10px;
+    padding-left: 25px;
+    outline: none;
+    transition: all .5s;
+    width: 100%;
+}
+
+.input:focus{
+    border: solid 1px var(--main-purple);
+}
+
+.input::placeholder{
+    color: var(--main-purple);
+}
+
+.input:focus::placeholder 
+{
+    font-size: .8rem;
+    transition: all .5s;
+}
+
+.labelFucus{
+    font-size: .8rem;
+}
+
+
+.label{
+    position: absolute;
+    top: 25%;
+    margin-left: .35rem;
+    font-size: 1.5rem;
+    color: var(--main-purple);
+}
+
+.btn{
+    padding: .5rem .4rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+ .addTodo{
+    background-color: var(--main-purple);
+    border: solid 1px var(--main-purple);
+    color: var(--white-primary);
+}
+
+.updatedTodo{
+    background-color: var(--secondary-purple);
+    border: solid 1px var(--secondary-purple);
+    color: var(--white-primary);
+    transition: all .5s;
+}
+
+.updatedTodo:hover{
+    background-color: var(--main-purple);
+    border: solid 1px var(--main-purple);
+    color: var(--white-primary);
+}
+
