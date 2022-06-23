@@ -6,22 +6,38 @@
 }
 
 h3{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--dark-primary);
     text-align: center;
     display: flex;
     align-items: center;
+    max-height: 4rem;
 }
 
 span{
     background-color: var(--secondary-purple);
     color: var(--main-purple);
-    width: 20px;
-    height: 20px;
-    font-size: 1.3rem;
+    width: 30px;
+    height: 30px;
+    font-size: 1.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     margin-left: 5px;
 }
+
+.select{
+    outline: 0;
+    margin-left: .5rem;
+    outline: 1px solid var(--main-purple);
+    font-size: 1.8rem;
+    color: var(--dark-primary);
+    transform: all .5s;
+    background-color: var(--white-primary);
+}
+
+.select:hover{
+    color: var(--main-purple);
+}
+

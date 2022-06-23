@@ -7,7 +7,7 @@ const Todo = ({ todo, onComplete, onEdit, onRemove }) => {
     <div className={`${styles.todo}`}>
       <div
         onClick={onComplete}
-        className={`${styles.title-todo} ${todo.isCompleted && styles.completed}`}
+        className={`${styles.titile_todo} ${todo.isCompleted && styles.completed}`}
       >
         {todo.text}
       </div>
