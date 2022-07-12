@@ -17,7 +17,7 @@ const TodoForm = (props) => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (!input) {
-      alert("فاطی دوست دارم");
+      alert("مقدار اینپوت خالی هست");
       return;
     }
     props.addTodoHandler(input);
